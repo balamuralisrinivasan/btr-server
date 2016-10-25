@@ -5,7 +5,7 @@ import Mocks from './data/mocks';
 
 */
 var express = require('express');
-var {apolloServer} = require('graphql-tools');
+var { apolloServer } = require('graphql-tools');
 var Schema = require('./data/schema');
 var Mocks = require('./data/mocks');
 
