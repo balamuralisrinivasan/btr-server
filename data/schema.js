@@ -32,3 +32,4 @@ schema {
 `;
 
 module.exports = typeDefinitions;
+
