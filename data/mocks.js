@@ -1,4 +1,6 @@
 var casual = require('casual');
+//import casual from casual;
+
 
 const mocks = {
   String: () => 'It works!',
