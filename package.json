@@ -1,9 +1,11 @@
+ 
 {
   "name": "btr-graphql-server",
   "version": "0.1.0",
   "description": "A transaction data service returned using Apollo GraphQL",
   "scripts": {
-    "start": "nodemon ./server.js --exec babel-node",
+ 
+   "start": "node ./server.js ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
