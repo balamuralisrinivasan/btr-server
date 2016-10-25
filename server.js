@@ -1,7 +1,13 @@
-import express from 'express';
+/**import express from 'express';
 import { apolloServer } from 'graphql-tools';
 import Schema from './data/schema';
 import Mocks from './data/mocks';
+
+*/
+var express = require('express');
+var {apolloServer} = require('graphql-tools');
+var Schema = require('./data/schema');
+var Mocks = require('./data/mocks');
 
 
 const GRAPHQL_PORT =process.env.PORT || 3000;

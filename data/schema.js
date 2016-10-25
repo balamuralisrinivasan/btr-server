@@ -31,4 +31,4 @@ schema {
 
 `;
 
-export default [typeDefinitions];
+module.exports = typeDefinitions;

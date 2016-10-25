@@ -1,35 +1,17 @@
-const typeDefinitions = `
+#btr server
 
-type Transaction {
-  id: Int
-  creditAcctName: String
-  debitAcctName: String
-  amount: Float
-  tranDate: String
-  tranRef: String
-  tranRemarks: String
+query {
+  transactions (accts:[
+      {acctid: "100"},
+    	{acctid : "200"}
+  						])
+  {
+    creditAcctName
+    debitAcctName
+    amount
+    id
+    tranRef
+    tranDate
+    tranRemarks
+  }
 }
-
-input Account {
-  acctid: String
-
-}
-
-
-type Query {
- transactions(accts: [Account]): [Transaction]
-
-}
-
-
-
-schema {
-  query: Query
-}
-
-
-
-`;
-
-export default [typeDefinitions];
-# btr-server
