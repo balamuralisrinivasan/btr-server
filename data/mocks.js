@@ -1,5 +1,5 @@
-var casual = require('casual');
-//import casual from casual;
+//var casual = require('casual');
+import casual from 'casual';
 
 
 const mocks = {
@@ -61,4 +61,6 @@ function round(value, exp) {
   return +(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp));
 }
 
-module.exports = mocks;
+export default mocks;
+
+//module.exports = mocks;
