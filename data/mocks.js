@@ -46,6 +46,7 @@ function currentAcctData() {
   acct.bic = getBICCode();
   acct.availableBalance = getAmount();
   acct.address = getAddress();
+  acct.transactions = tranData();
 
   return acct;
 

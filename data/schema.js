@@ -16,6 +16,7 @@ type CurrentAccount {
   bic: String
   availableBalance: String
   address: AccountAddress
+  transactions: [Transaction]
 }
 
 type LoanAccount {
