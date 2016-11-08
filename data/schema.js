@@ -1,14 +1,46 @@
 const typeDefinitions = `
 
 type Transaction {
-  id: Int
-  creditAcctName: String
-  debitAcctName: String
+  bankReferenceNo: Int
+  instrumentID: String
+  EndToEndID: String
+  creditAcctIBAN: String
+  debitAcctIBAN: String
   amount: Float
-  tranDate: String
-  tranRef: String
-  tranRemarks: String
 }
+
+type CurrentAccount {
+  iban: String
+  ccy: String
+  name: String
+  bic: String
+  availableBalance: String
+  address: AccountAddress
+}
+
+type LoanAccount {
+  iban: String
+  ccy: String
+  name: String
+  bic: String
+  outStandingAmount : String
+  principle: String
+  lastDisbursedDate: String
+  address: AccountAddress
+
+}
+
+type AccountAddress {
+
+strtNum: String
+buildingNum: String
+postalCode: String
+city: String
+country: String
+
+
+}
+
 
 input Account {
   acctid: String
@@ -18,6 +50,11 @@ input Account {
 
 type Query {
  transactions(accts: [Account]): [Transaction]
+ 
+ currentAccount(accountID: String): CurrentAccount
+ 
+ loanAccount(accountID: String): LoanAccount
+ 
 
 }
 
@@ -32,6 +69,3 @@ schema {
 `;
 
 export default [typeDefinitions];
-
-//module.exports = typeDefinitions;
-
